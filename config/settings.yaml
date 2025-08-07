@@ -1,0 +1,23 @@
+data_sources:
+  sqlite_db:
+    enabled: true
+    path: C:/Users/Maxe/Desktop/VXP_DB.db
+    tables:
+      patients: patients
+      data_points: data_points
+    fields:
+      patient_id: patient_id
+      signal_field: amplitude
+      time_field: timestamp
+      foreign_key: patient_fk
+
+  dicom_folder:
+    enabled: true
+    path: C:/Users/Maxe/Desktop/aria_db
+    recursive: true  # includes subfolders
+
+output:
+  output_dir: C:/Users/Maxe/Desktop/PreAtemkurvenreport
+  csv_file: C:/Users/Maxe/Desktop/PreAtemkurvenreport/summary.csv
+  excel_file: C:/Users/Maxe/Desktop/PreAtemkurvenreport/summary.xlsx
+  pdf_report: C:/Users/Maxe/Desktop/PreAtemkurvenreport/report.pdf
